@@ -1,5 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'; // 导入 Navigate 组件
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; // 导入 Navigate 组件
 import { useEffect } from 'react';
 import Home from './Page-home';
 import About from './Page-about';
@@ -10,7 +9,7 @@ function App() {
     <BrowserRouter basename="/my-site">
       <Routes>
             {/* 根路径重定向到 /home */}
-            <Route path="/" element={<Navigate replace to="/home" />} />
+            <Route path="/" element={<Navigate  to="/home" replace />} />
             
             {/* 正常的路由配置 */}
             <Route
