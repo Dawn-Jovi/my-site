@@ -19,9 +19,10 @@
     background: linear-gradient(120deg, #2c3e50 0%, #3498db 100%);
 }
 
-.container {
+.g-container {
     position: relative;
-    padding: 20px;
+    /* padding: 20px; */
+    z-index: 0;
 }
 
 .mode-selector {

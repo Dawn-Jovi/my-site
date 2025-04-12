@@ -7,9 +7,10 @@ const TimeLine = ({ image, title, date, desc, link }) => {
         <div className="timeline-item">
             <div img-content>
                 <img
-                src={image}
+                    src={image}
+                    alt=""
                     className="timeline-img" />
-                <a className='timeline-title'>{title}</a>
+                <li className='timeline-title'>{title}</li>
             </div>
             <p className="timeline-date-text">{date}-{desc}</p>
             <Link to={link} className="timeline-Link">查看项目</Link>

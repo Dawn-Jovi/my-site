@@ -23,10 +23,10 @@ const Clouds = () => {
               left={Math.random() * 100}
               top={Math.random() * 70 + 10}
               // 动画周期：20 到 40 秒（数值越大移动越慢
-              duration={Math.random() * 20 + 20}
+              duration={Math.random() * 10 + 20}
               // 缩放比例
               scale={Math.random() * 1.2 + 0.5}
-              delay={Math.random() * -20}
+              delay={Math.random() * -5}
         />
       ))}
     </div>

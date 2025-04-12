@@ -24,7 +24,7 @@ function About() {
             
             <Navbar/>
 
-            <div className="container">
+            <div className="about-container">
                 {/* 用户配置 */}
                 <div className="user-profile">
                     {/* 装饰线 */}
@@ -41,9 +41,9 @@ function About() {
                         <p className='profile-subtitle'>❤️ 前端魔法师 | 🚀 后端探索者 | 🎮 游戏爱好者</p>
                         {/* tag区域 */}
                         <div className='tags-container'>
-                            <span class="anime-tag">全栈开发萌新</span>
-                            <span class="anime-tag">Python修行中</span>
-                            <span class="anime-tag">咖啡因依赖者</span>
+                            <span className="anime-tag">全栈开发萌新</span>
+                            <span className="anime-tag">Python修行中</span>
+                            <span className="anime-tag">咖啡因依赖者</span>
                         </div>
                     </section>
                 </div>

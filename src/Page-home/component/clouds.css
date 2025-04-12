@@ -6,7 +6,8 @@
     height: 100vh;
     /* background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%); */
     overflow: hidden;
-    z-index: -1;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .cloud {
@@ -17,6 +18,8 @@
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
     will-change: transform, opacity;
     opacity: 0.9;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 
     width: 150px;
     height: 50px;

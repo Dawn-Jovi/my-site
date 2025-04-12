@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
 import './background.css';
-import sun from '../assets/太阳.png'
-import moon from '../assets/月亮晚上.png'
-import morning from '../assets/早上早晨.png'
 
 const Background = () => {
     const [currentPeriod, setCurrentPeriod] = useState('night');
@@ -41,12 +38,12 @@ const Background = () => {
         setManualPeriod(value === 'auto' ? null : value);
     };
 
-    // 获取当前显示模式
-    const displayMode = manualPeriod ? '手动' : '自动';
-    const displayPeriod = manualPeriod || currentPeriod;
+    // // 获取当前显示模式
+    // const displayMode = manualPeriod ? '手动' : '自动';
+    // const displayPeriod = manualPeriod || currentPeriod;
 
     return (
-    <div className="container">
+    <div className="g-container">
       <div className="mode-selector">
         <select 
           value={manualPeriod || 'auto'}

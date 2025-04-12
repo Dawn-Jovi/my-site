@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './home.css';
 import Card from './component/card';
 import cardsData from '../data/cardsData';
@@ -13,6 +12,7 @@ function Home() {
     return (
         <div className='home'>
             <div className="content-layer">
+                <Background />
                 <Stars />
                 <Navbar />
                 <main className='mainContent-bg'>
@@ -54,7 +54,6 @@ function Home() {
                     </section>
                 </main>
             </div>
-            <Background/>
             <Clouds />
         </div>
     );

@@ -8,11 +8,6 @@
     box-sizing: border-box;
 }
 
-.home {
-    position: relative;
-    overflow: auto;
-    z-index: 1;
-}
 .content-layer{
     position: relative;
     z-index: 2;
@@ -60,6 +55,26 @@
     margin-right: auto;
     transition: all 0.3s ease;
 }
+
+/* 时间线内容容器 */
+.timeline-content {
+    display: flex;
+    gap: 1rem;
+    min-width: max-content;
+    padding: 0 1rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.timeline-box {
+    background: #ffffff00;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-width: 300px;
+    flex-shrink: 0;
+    width: 78%;
+}
+
 
 /* 响应式处理 - 中等屏幕以上 */
 @media (min-width: 768px) {
