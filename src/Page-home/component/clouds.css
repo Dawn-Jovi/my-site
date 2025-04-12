@@ -1,0 +1,56 @@
+.sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%); */
+    overflow: hidden;
+    z-index: -1;
+}
+
+.cloud {
+    position: absolute;
+    background: white;
+    animation: float cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    filter: url(#filter);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    will-change: transform, opacity;
+    opacity: 0.9;
+
+    width: 150px;
+    height: 50px;
+    border-radius: 70px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background: inherit;
+        border-radius: 50%;
+        filter: brightness(1.05);
+    }
+
+    &::before {
+        width: 70px;
+        height: 70px;
+        top: -35px;
+        left: 15px;
+    }
+    &::after {
+        width: 90px;
+        height: 90px;
+        top: -40px;
+        right: 15px;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(100vw) translateY(-5%);
+    }
+
+    100% {
+        transform: translateX(-100vw) translateY(5%);
+    }
+}

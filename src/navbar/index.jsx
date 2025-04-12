@@ -82,30 +82,34 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
-
-
         <Link to="/home" className="logo">
           <img src={cat} alt="Logo" className="logo-img" />
           DawnJovi
         </Link>
 
-
         <ul className="nav-links">
           {NavItems.map((item) => (
-            <Link to={item.path} key={item.id} className='nav-links-a'>
-              <a 
-                href={item.href}
-                className={activeId === item.id ? 'active' : ''}
-                onClick={(e) => handleSmoothScroll(e, item.href)}
+            <li key={item.id}>
+              <Link
+                to={item.path}
+                className={`nav-links-a ${activeId === item.id ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const target = document.querySelector(item.path);
+                  if (target) {
+                    target.scrollIntoView({ 
+                      behavior: 'smooth', 
+                      block: 'start' 
+                    });
+                  }
+                }}
               >
                 {item.icon && <img src={item.icon} alt="" className="nav-links-img" />}
                 {item.text}
-              </a>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
-
-        
       </div>
     </nav>
   );
