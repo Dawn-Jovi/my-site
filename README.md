@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# 🚀 萌新全栈工程师的成长基地
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="200" alt="coding cat">
+  <p><em>"从前有个小白，他学会了Ctrl+C/V..."</em></p>
+</div>
 
-## Available Scripts
+## 📌 项目概述
 
-In the project directory, you can run:
+这是一个记录我从`console.log("Hello World")`到~~可能~~成为全栈工程师的成长型项目。包含：
 
-### `npm start`
+- 我的踩坑日记 💣
+- 实验性玩具项目 🧸
+- 学习路线图 🗺️
+- 以及各种未完成的半成品... 🏗️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ 技术栈
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| 领域       | 技术             | 熟练度                              |
+| ---------- | ---------------- | -----------------------------------|
+| **前端**   | React, Vue, 玄学 |           [=======   ] 70%          |
+| **后端**   | Node.js, 咖啡    |           [====      ] 45%          |
+| **数据库** | MongoDB, 想象力  |           [====      ] 30%          |
+| **运维**   | Docker, 祈祷     |           [====      ] 10%          |
 
-### `npm test`
+## 🎮 快速开始
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# 克隆本仓库（虽然你可能只是看看）
+git clone https://github.com/Dawn-Jovi/PersonalWeb.github.io.git
 
-### `npm run build`
+# 安装依赖（其实大部分时间在解决依赖冲突）
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 运行项目（祈祷不要报错）
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> 💡 温馨提示：如果遇到问题，可以尝试以下步骤：
+>
+> 1. 删除 node_modules
+> 2. 重新 npm install
+> 3. 重复以上步骤直到放弃
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🌱 成长记录
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [x] 学会用 div 画正方形
+- [x] 理解 Promise 是用来约会的
+- [ ] 搞明白为什么代码昨天还能运行
+- [ ] 征服 TypeScript 的类型体操
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 如何贡献
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+欢迎通过以下方式帮助一个萌新：
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. 给我的 BUG 点个赞 👍
+2. 教我怎么用 Git rebase
+3. 请我喝咖啡提神 ☕
 
-## Learn More
+或者直接：
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git checkout -b feature/你的天才想法
+git commit -m "feat: 拯救了世界"
+git push origin feature/你的天才想法
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎁 特别鸣谢
 
-### Code Splitting
+- [Stack Overflow](https://stackoverflow.com) - 我真正的母校
+- [ChatGPT](https://chat.openai.com) - 我的赛博导师
+- 咖啡因 - 维持生命的必需物质
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📜 开源协议
 
-### Analyzing the Bundle Size
+本项目采用 **"尽量别看我代码"** 协议：
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+版权所有 (c) 2024 一个正在秃头的程序员
 
-### Making a Progressive Web App
+特此免费授予任何获得本软件副本的人：
+- 可以笑但别太大声
+- 可以fork但别让我知道
+- 遇到问题请自己解决
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- 把秘密写在这里，只有看源码的人会发现 -->
+<!-- 🎉 抓到你了！ -->
+<!-- 既然你都打开源码了... 要不要考虑教我写代码？-->
+<!-- 联系邮箱: dawnjovi@163.com -->
