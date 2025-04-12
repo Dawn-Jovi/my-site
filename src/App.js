@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'; // 导入 Navigate 组件
+import { BrowserRouter } from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from './Page-home';
 import About from './Page-about';
