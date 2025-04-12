@@ -1,0 +1,74 @@
+.tooltip-tail {
+    position: absolute;
+    top: 100%;
+    /* 放在提示框底部 */
+    left: 50%;
+    /* 居中 */
+    transform: translateX(-50%);
+    /* 精确居中 */
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* 悬停时显示提示框 */
+.day-cell:hover~.anime-tooltip,
+.anime-tooltip:hover {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #ff6b8b;
+}
+
+.tooltip-emoji {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.tooltip-date {
+    font-size: 14px;
+}
+
+.tooltip-body {
+    font-size: 13px;
+    color: #666;
+}
+
+.level-indicator {
+    color: var(--accent-color);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* 悬停动画 */
+.day-cell:hover {
+    stroke: rgba(255, 105, 140, 0.3);
+    stroke-width: 2;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: cellPulse 0.6s infinite alternate;
+}
+
+@keyframes cellPulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.contribution-grid-container:hover .anime-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}

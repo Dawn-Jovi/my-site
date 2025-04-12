@@ -29,7 +29,7 @@ const NavItems = [
     },
     {
         id: "code",
-        path: "/#code",
+        path: "/about",
         icon: code,
         text: "代码之外"
     }

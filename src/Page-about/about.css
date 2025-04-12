@@ -1,0 +1,250 @@
+:root {
+    /* 页面背景色 */
+    --bg-color: #f6f8fa;
+    /* 卡片背景 */
+    --card-bg: #ffffff;
+    /* 强调色 */
+    --accent-color: #58a6ff;
+    /* 主文本色 */
+    --text-color: #24292f;
+
+    /* 统一圆角 */
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* 头像尺寸 */
+    --avatar-size: 150px;
+    /* 区块间距 */
+    --section-spacing: 30px;
+
+    --spacing-lg: 30px;
+    --spacing-md: 20px;
+    --spacing-sm: 10px;
+
+    /* 过渡时长 */
+    --transition-duration: 0.3s;
+    /* 悬浮放大系数 */
+    --hover-scale: 1.05;
+}
+
+.aboutme-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image:
+        linear-gradient(rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* 网格间距 */
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 100px auto 20px;
+    padding: 0 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 头像容器 */
+.avatar-section {
+    --border-width: 4px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    border: var(--border-width) solid var(--accent-color);
+    margin-right: var(--section-spacing);
+    position: relative;
+    background:
+        linear-gradient(45deg,
+            rgba(88, 166, 255, 0.1) 0%,
+            rgba(88, 166, 255, 0.2) 100%),
+        var(--avatar-image) center/cover;
+
+    /* 悬浮动画 */
+    &:hover {
+        transform:
+            rotate(8deg) scale(var(--hover-scale));
+        cursor: pointer;
+    }
+}
+
+/* 装饰线动画 */
+.decor-line {
+    position: absolute;
+    background: var(--accent-color);
+    opacity: 0.2;
+    animation: decorFlow 3s ease-in-out infinite;
+
+    &.top {
+        top: 0;
+        left: -50px;
+        width: 150%;
+        height: 8px;
+        transform: rotate(-3deg);
+    }
+}
+
+/* tag区域 */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* 二次元标签样式 */
+.anime-tag {
+    padding: 4px 12px;
+    background: #ffe3e3;
+    border-radius: 16px;
+    border: 1px dashed #ff7b7b;
+    position: relative;
+    overflow: hidden;
+
+    /* 悬浮动效 */
+    &::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg,
+                transparent 25%,
+                rgba(255, 255, 255, 0.3) 50%,
+                transparent 75%);
+        animation: shine 2s infinite;
+    }
+}
+
+@keyframes shine {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* 统计卡片 */
+.stats-card {
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.start-item {
+    padding: var(--spacing-md);
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background: var(--accent-color);
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    &:hover::before {
+        width: 80%;
+    }
+
+}
+
+.start-item-count {
+    font-size: 2em;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* 技能卡片 - 带悬停动画 */
+.skill-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid var(--accent-color);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 热力图容器样式 */
+.heatmap {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+}
+
+/* 基础单元格样式 */
+.day-cell {
+    shape-rendering: geometricPrecision;
+    fill: #ebedf0;
+    stroke: rgba(27, 31, 35, 0.06);
+    stroke-width: 1;
+    transition: fill 0.2s;
+}
+
+.day-cell.level-0 {
+    fill: #ffebee;
+}
+
+.day-cell.level-1 {
+    fill: #ffcdd2;
+}
+
+.day-cell.level-2 {
+    fill: #ff9db5;
+}
+
+.day-cell.level-3 {
+    fill: #ff6b8b;
+}
+
+/* 二次元风格提示框 */
+.anime-tooltip {
+    position: absolute;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(255, 105, 140, 0.2);
+    font-family: 'Comic Sans MS', 'Marker Felt', 'Arial Rounded MT Bold', sans-serif;
+    border-left: 4px solid var(--accent-color);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 100;
+    width: 160px;
+    text-align: center;
+}

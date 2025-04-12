@@ -1,0 +1,49 @@
+.timeline-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    width: 16rem;
+    flex-shrink: 0;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    transform-origin: center center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.img-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.timeline-title {
+    font-weight: 600;
+}
+
+.timeline-date-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(229 231 235);
+}
+
+.timeline-Link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: rgb(253 224 71);
+    text-decoration: none;
+
+    &::after {
+        content: " →";
+        display: inline-block;
+        margin-left: 0.25rem;
+    }
+}
