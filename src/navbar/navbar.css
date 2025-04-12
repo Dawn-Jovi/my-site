@@ -1,0 +1,121 @@
+/* 导航栏基础样式 - 固定在顶部 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    /* 默认内边距 */
+    transition: all 0.3s ease;
+    /* 平滑过渡效果 */
+    z-index: 999;
+    /* 确保在最上层 */
+}
+
+/* 滚动状态下的导航栏样式 */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    /* 半透明白色背景 */
+    padding: 1rem 0;
+    /* 滚动后缩小内边距 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
+}
+
+/* 导航栏内容容器 */
+.navbar-content {
+    max-width: 1200px;
+    /* 最大宽度限制 */
+    margin: 0 auto;
+    /* 水平居中 */
+    display: flex;
+    justify-content: space-between;
+    /* 左右分布 */
+    align-items: center;
+    /* 垂直居中 */
+    padding: 0 2rem;
+    /* 左右内边距 */
+}
+
+/* Logo文字样式 */
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* 渐变文字效果 */
+    background: linear-gradient(94.75deg,
+            rgb(60, 172, 247) 0%,
+            rgb(131, 101, 253) 43.66%,
+            rgb(255, 141, 112) 64.23%,
+            rgb(247, 201, 102) 83.76%,
+            rgb(172, 143, 100) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 10001;
+    /* 确保在最高层 */
+}
+
+/* Logo图片样式 */
+.logo-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 导航链接容器 */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    /* 链接间距 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* 单个导航链接样式 */
+.nav-links-a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* 图标与文字间距 */
+    color: #2d3436;
+    /* 文字颜色 */
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    /* 颜色过渡 */
+
+    /* 链接下划线效果 */
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #6c5ce7;
+        /* 紫色下划线 */
+        transition: width 0.3s ease;
+        /* 宽度过渡 */
+    }
+    /* 鼠标悬停时显示完整下划线 */
+    &:hover::after {
+        width: 100%;
+    }
+    &:hover {
+        color: #6c5ce7;
+    }
+}
+
+
+/* 导航栏中的图标样式 */
+.nav-links-img {
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    display: inline-block;
+}
