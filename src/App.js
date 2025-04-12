@@ -6,33 +6,36 @@ import BuildPage from './Page-build';
 
 function App() {
   return (
-    <Routes>
-      {/* 根路径重定向到 /home */}
-      <Route path="/" element={<Navigate replace to="/home" />} />
-      
-      {/* 正常的路由配置 */}
-      <Route
-        path="/home"
-        element={
-          <PageWrapper
-            title="代码进化录 - 全栈萌新的成长之路"
-            children={<Home />}
-          />}
-      />
+    <BrowserRouter basename="/my-site">
+      <Routes>
+            {/* 根路径重定向到 /home */}
+            <Route path="/" element={<Navigate replace to="/home" />} />
+            
+            {/* 正常的路由配置 */}
+            <Route
+              path="/home"
+              element={
+                <PageWrapper
+                  title="代码进化录 - 全栈萌新的成长之路"
+                  children={<Home />}
+                />}
+            />
 
-      <Route 
-        path="/about" 
-        element={
-          <PageWrapper title="代码之外"
-            children={<About/>} 
-        />}
-      />
-      
-      <Route 
-        path="/buildpage" 
-          element={<PageWrapper title="施工中 - 萌新工程师进化ing" children={<BuildPage/>} />}
-      />
-    </Routes>
+            <Route 
+              path="/about" 
+              element={
+                <PageWrapper title="代码之外"
+                  children={<About/>} 
+              />}
+            />
+            
+            <Route 
+              path="/buildpage" 
+                element={<PageWrapper title="施工中 - 萌新工程师进化ing" children={<BuildPage/>} />}
+            />
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
 
