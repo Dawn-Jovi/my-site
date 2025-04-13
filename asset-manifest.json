@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.4ea3243b.css",
-    "main.js": "./static/js/main.99151f45.js",
-    "static/media/头像.png": "./static/media/头像.de68db80ffd09272a525.png",
-    "static/media/寿司1.png": "./static/media/寿司1.4d81d5d4f7bc2d232e6c.png",
-    "static/media/煎蛋.png": "./static/media/煎蛋.d48612821e2727e2989e.png",
-    "static/media/面包.png": "./static/media/面包.1dc34d7fa55c316f5085.png",
-    "static/media/芝士.png": "./static/media/芝士.b371eb21902628bd586b.png",
-    "static/media/布丁.png": "./static/media/布丁.afc47b2e03c66d0c5168.png",
-    "static/media/牛奶.png": "./static/media/牛奶.47d4f29f135a12c0404f.png",
-    "index.html": "./index.html",
-    "main.4ea3243b.css.map": "./static/css/main.4ea3243b.css.map",
-    "main.99151f45.js.map": "./static/js/main.99151f45.js.map"
+    "main.css": "/my-site/static/css/main.4ea3243b.css",
+    "main.js": "/my-site/static/js/main.16552999.js",
+    "static/media/头像.png": "/my-site/static/media/头像.de68db80ffd09272a525.png",
+    "static/media/寿司1.png": "/my-site/static/media/寿司1.4d81d5d4f7bc2d232e6c.png",
+    "static/media/煎蛋.png": "/my-site/static/media/煎蛋.d48612821e2727e2989e.png",
+    "static/media/面包.png": "/my-site/static/media/面包.1dc34d7fa55c316f5085.png",
+    "static/media/芝士.png": "/my-site/static/media/芝士.b371eb21902628bd586b.png",
+    "static/media/布丁.png": "/my-site/static/media/布丁.afc47b2e03c66d0c5168.png",
+    "static/media/牛奶.png": "/my-site/static/media/牛奶.47d4f29f135a12c0404f.png",
+    "index.html": "/my-site/index.html",
+    "main.4ea3243b.css.map": "/my-site/static/css/main.4ea3243b.css.map",
+    "main.16552999.js.map": "/my-site/static/js/main.16552999.js.map"
   },
   "entrypoints": [
     "static/css/main.4ea3243b.css",
-    "static/js/main.99151f45.js"
+    "static/js/main.16552999.js"
   ]
 }
