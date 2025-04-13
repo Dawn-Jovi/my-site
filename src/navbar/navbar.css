@@ -8,7 +8,7 @@
     /* 默认内边距 */
     transition: all 0.3s ease;
     /* 平滑过渡效果 */
-    z-index: 999;
+    z-index: 99;
     /* 确保在最上层 */
 }
 

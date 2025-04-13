@@ -22,7 +22,6 @@
 .g-container {
     position: relative;
     /* padding: 20px; */
-    z-index: 0;
 }
 
 .mode-selector {
@@ -32,7 +31,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    z-index: 5;
+    z-index: 100;
 }
 .mode-dropdown {
     padding: 8px 15px;
