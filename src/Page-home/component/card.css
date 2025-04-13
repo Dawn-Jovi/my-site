@@ -14,19 +14,27 @@
 .card-img{
     width: 30px;
     height: 30px;
+    object-fit: contain;
+    user-select: none;
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.8rem;
-    color: #bae6fd;
+    user-select: none;
+    /* color: #bae6fd; */
+    /* 巧克力色 */
+    color: #5C3317;
+    /* color: #856363; */
 }
 
 .card-text {
     font-size: 0.875rem;
     margin-bottom: 1rem;
     line-height: 1.25;
+    user-select: none;
+    color: #4F2F4F;
 }
 
 .card-button{
@@ -41,4 +49,7 @@
     &:hover {
         background-color: #fbbf24;
     }
+}
+.card-button-text{
+    user-select: none;
 }

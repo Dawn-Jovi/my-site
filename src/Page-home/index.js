@@ -43,7 +43,7 @@ function Home() {
                             {cardsData.map((item, index) => (
                                 <Card 
                                     key={index}
-                                    image={item.icon}
+                                    image={item.image}
                                     title={item.title}
                                     text={item.text}
                                     link={item.link}

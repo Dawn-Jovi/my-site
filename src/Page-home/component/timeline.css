@@ -1,5 +1,5 @@
 .timeline-item {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(230, 232, 250, 0.66);
     backdrop-filter: blur(4px);
     border-radius: 0.5rem;
     width: 16rem;
@@ -27,18 +27,21 @@
 
 .timeline-title {
     font-weight: 600;
+    color: #23238E;
+    list-style: none;
 }
 
 .timeline-date-text {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: rgb(229 231 235);
+    color: #70DBDB;
+
 }
 
 .timeline-Link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: rgb(253 224 71);
+    color: #4D4DFF;
     text-decoration: none;
 
     &::after {

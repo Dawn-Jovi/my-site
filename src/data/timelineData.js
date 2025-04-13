@@ -1,4 +1,4 @@
-import react from '../assets/React.png';
+import react from './assets/React.png';
 
 const timelineData = [
     {
