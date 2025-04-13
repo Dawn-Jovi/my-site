@@ -6,7 +6,7 @@ import BuildPage from './Page-build';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/my-site">
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<PageWrapper title="首页" children={<Home />} />} />

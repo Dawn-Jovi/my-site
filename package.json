@@ -1,7 +1,7 @@
 {
   "name": "my-site",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://Dawn-Jovi.github.io/my-site",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -19,8 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/Dawn-Jovi/my-site.git -b gh-pages"
+    "predeploy": "git add . && git commit -m \"Auto-commit before deployment\" && npm run build",
+    "deploy": "gh-pages -d build -r git@github.com/Dawn-Jovi/my-site.git -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
