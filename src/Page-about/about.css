@@ -139,50 +139,25 @@
 /* 统计卡片 */
 .stats-card {
     background-color: #ffffff;
+    padding: 20px;
     border-radius: var(--border-radius);
+    margin: 20px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-md);
 }
 
-.start-item {
-    padding: var(--spacing-md);
-    position: relative;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    text-align: center;
+@media (min-width: 768px) {
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 4px;
-        background: var(--accent-color);
-        border-radius: 2px;
-        transition: width 0.3s ease;
-    }
-
-    &:hover::before {
-        width: 80%;
-    }
-
-}
-
-.start-item-count {
-    font-size: 2em;
-    margin: 10px 0;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.1);
+    .stats-card {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+
 
 /* 技能卡片 - 带悬停动画 */
-.skill-card {
+.front-con,
+.end-con,
+.database-con {
     background: var(--card-bg);
     padding: 20px;
     border-radius: var(--border-radius);
@@ -190,12 +165,13 @@
     margin: 20px 0;
     transition: transform 0.2s, box-shadow 0.2s;
     border-left: 4px solid var(--accent-color);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
 }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
 
 /* 热力图容器样式 */
 .heatmap {

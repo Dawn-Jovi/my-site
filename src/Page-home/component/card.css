@@ -52,4 +52,5 @@
 }
 .card-button-text{
     user-select: none;
+    list-style: none;
 }

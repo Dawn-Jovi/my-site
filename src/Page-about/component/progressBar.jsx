@@ -9,11 +9,11 @@ const ProgressBar = ({ percentage }) => {
         <div 
             className="progress-bar" 
             style={{ 
-            width: `${percentage}%`,
-            height: '10px',
-            backgroundColor: '#58a6ff',
-            borderRadius: '4px',
-            transition: 'width 0.3s ease'
+                width: `${percentage}`,
+                height: '10px',
+                backgroundColor: '#58a6ff',
+                borderRadius: '4px',
+                transition: 'width 0.3s ease'
             }}
         ></div>
         </div>

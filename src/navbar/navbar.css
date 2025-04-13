@@ -75,6 +75,26 @@
     align-items: center;
 }
 
+.nav-links-id.active{
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(108, 92, 231, 0.1);
+        border-radius: 50%;
+        z-index: -1;
+        animation: pulse 2s infinite;
+    }
+}
+
+
 /* 单个导航链接样式 */
 .nav-links-a {
     display: inline-flex;

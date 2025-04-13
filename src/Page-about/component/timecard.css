@@ -1,0 +1,36 @@
+.start {
+    padding: 20px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    text-align: center;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background: #58a6ff;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    &:hover::before {
+        width: 80%;
+    }
+
+}
+
+.start-item-count {
+    font-size: 2em;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

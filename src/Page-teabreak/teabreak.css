@@ -1,0 +1,40 @@
+.teabreak-container{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image:
+        linear-gradient(rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* 网格间距 */
+    margin: 0;
+    min-height: 100vh;
+}
+
+.teabreak-content{
+    width: 80%;
+    margin: 100px auto 20px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 400px 1fr
+}
+
+.article-item{
+    list-style: none;
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    user-select: none;
+    &:active {
+        background-color: #3498db;
+        color: #fff;
+    }
+}
+
+.article-item.active{
+    background-color: #3498db;
+}

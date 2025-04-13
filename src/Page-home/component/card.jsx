@@ -10,7 +10,7 @@ function Card({ image, title, text, link, buttonText }) {
             <h3 className='card-title'>{title}</h3>
             <p className='card-text'>{text}</p>
             <Link to={link} className='card-button'>
-                <a className='card-button-text'>{buttonText}</a>
+                <li className='card-button-text'>{buttonText}</li>
             </Link>
         </div>
     

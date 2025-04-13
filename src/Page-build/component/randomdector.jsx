@@ -9,7 +9,6 @@ function RandomDecor() {
   // 初始化装饰元素数组
   const [decorItems] = useState(() => {
     const decorCount = 20; //元素数量
-    // const decorImages = [a1, a2, a3, a4, a5, a6, a7,];//图片数组
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
