@@ -9,7 +9,8 @@ const Cloud = ({ left, top, duration, scale, delay }) => (
         top: `${top}%`,
         animationDuration: `${duration}s`,
         animationDelay: `${delay}s`,
-        transform: `scale(${scale})`,
+        // transform: `scale(${scale})`,
+        "--cloud-scale": scale,
     }}
   />
 );
@@ -17,16 +18,17 @@ const Cloud = ({ left, top, duration, scale, delay }) => (
 const Clouds = () => {
   return (
     <div className="sky">
-      {Array.from({ length: 15 }).map((_, i) => (
+      {Array.from({ length: 30 }).map((_, i) => (
         <Cloud
               key={i}
-              left={Math.random() * 100}
+              left={Math.random() *(-100)+100}
               top={Math.random() * 70 + 10}
               // 动画周期：20 到 40 秒（数值越大移动越慢
-              duration={Math.random() * 10 + 20}
+              duration={Math.random() * 80 + 40}
               // 缩放比例
               scale={Math.random() * 1.2 + 0.5}
-              delay={Math.random() * -5}
+              
+              delay={Math.random() * (-10)+-5}
         />
       ))}
     </div>

@@ -5,10 +5,10 @@ const TimeLine = ({ image, title, date, desc, link }) => {
     return (
         
         <div className="timeline-item">
-            <div img-content>
+            <div className='img-content'>
                 <img
                     src={image}
-                    alt=""
+                    alt=" "
                     className="timeline-img" />
                 <li className='timeline-title'>{title}</li>
             </div>

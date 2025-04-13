@@ -84,3 +84,15 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
