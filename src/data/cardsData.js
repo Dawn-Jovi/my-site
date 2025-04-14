@@ -8,7 +8,7 @@ export const cardsData = [
     image: tea,
     title: "茶歇时光机",
     text: "记录每日学习与踩坑经历",
-    link: "/buildpage",
+    link: "/teabreak",
     buttonText: "阅读最新 →"
   },
   {

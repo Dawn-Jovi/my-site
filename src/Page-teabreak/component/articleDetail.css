@@ -1,0 +1,44 @@
+@font-face{
+    font-family: "ArticleA";
+    src: url('../../font/No.326-ShangShouChunYuanTi-2.ttf');
+}
+
+.article-detail{
+    flex: 1;
+    overflow-y: auto;
+    height: 0;
+    padding: 10px 100px ;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+    }
+}
+.title{
+    font-size: 40px;
+    font-weight: 60;
+    font-family: "ArticleA", Arial, sans-serif;
+}
+.path{
+    text-decoration: none;
+    cursor: pointer;
+}
+.meta{
+    display: inline-block;
+    font-size: 13px;
+    color: #999;
+}
+

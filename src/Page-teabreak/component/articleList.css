@@ -1,0 +1,71 @@
+.list-container {
+    flex: 1;
+    overflow-y: auto;
+    height: 0;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+    }
+}
+
+/* 单个文章项样式 */
+.item {
+    border: 1px solid #f0f0f0;
+    /* 光标类型 */
+    cursor: pointer;
+    transform: background-color 0.2s;
+    list-style: none;
+    padding: 0 10px 0 15px;
+    user-select: none;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #f9f9f9;
+    }
+
+    &:active {
+        background-color: e6f7ff;
+        border-left: 3px solid #1890ff;
+    }
+}
+
+/* 选项box */
+.a-box.active {
+    background-color: #fff98c;
+}
+
+/* 单个文章项标题 */
+.a-title {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 5px;
+    overflow: hidden;
+    /* 隐藏的溢出内容 */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    line-height: 40px;
+
+    &:not(.active):hover {
+        color: rgb(156, 156, 45);
+    }
+}
+
+/* 单个文章项日期 */
+.date {
+    font-size: 15px;
+    color: #999;
+}
