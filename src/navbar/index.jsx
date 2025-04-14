@@ -20,8 +20,8 @@ const Navbar = () => {
 
   const NavItems = [
     { id: "teabreak", path: "/teabreak", selector: "#teabreak", icon: tea, text: "茶歇时光机" },
-    { id: "projectMuseum", path: "/buildpage", selector: "#projectMuseum", icon: coffee, text: "项目博物馆" },
-    { id: "projects", path: "/buildpage", selector: "#projects", icon: ice, text: "吃什么" },
+    { id: "eaToday", path: "/eaToday", selector: "#eaToday", icon: ice, text: "碳水快乐屋" },
+    { id: "echoArk", path: "/echoArk", selector: "#echoArk", icon: coffee, text: "数字方舟" },
     { id: "about", path: "/about", selector: "#about", icon: code, text: "代码之外" },
   ];
 

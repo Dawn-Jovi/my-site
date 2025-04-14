@@ -4,6 +4,8 @@ import Home from './Page-home';
 import About from './Page-about';
 import BuildPage from './Page-build';
 import TeaBreak from './Page-teabreak';
+import EAToday from "./Page-eaToday"
+import EchoArk from './Page-echoArk';
 
 function App() {
   return (
@@ -14,7 +16,11 @@ function App() {
         <Route path="/about" element={<PageWrapper title="码力全开の萌新工程师" children={<About />} />} />
         <Route path="/buildpage" element={<PageWrapper title="施工中 - 萌新工程师进化ing" children={<BuildPage />} />} />
         <Route path="/teabreak" element={<PageWrapper title="茶歇时光机" children={<TeaBreak />} />} />
+        <Route path="/eaToday" element={<PageWrapper title="碳水快乐屋" children={<EAToday />} />} />
+        <Route path="/echoArk" element={<PageWrapper title="数字方舟" children={<EchoArk />} />} />
+        
       </Routes>
+      
     </HashRouter>
   );
 }

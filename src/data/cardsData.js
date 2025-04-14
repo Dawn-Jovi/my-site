@@ -13,9 +13,9 @@ export const cardsData = [
   },
   {
     image: pro,
-    title: "项目博物馆",
+    title: "数字方舟",
     text: "查看从TodoList到全栈应用的进化",
-    link: "/buildpage",
+    link: "/echoArk",
     buttonText: "探索项目 →"
   },
   {

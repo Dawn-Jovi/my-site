@@ -17,7 +17,7 @@
 /* 主要内容区域 */
 .teabreak-content{
     flex: 1;
-    padding: 60px 20px 10px 20px;
+    padding: 70px 20px 10px 20px;
     display: flex;
     justify-self: center;
     overflow: hidden;
