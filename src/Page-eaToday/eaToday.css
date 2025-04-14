@@ -14,10 +14,48 @@
         linear-gradient(90deg, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
     background-size: 20px 20px;
 }
-.content{
+.eat-content{
     flex: 1;
-    padding: 70px 20px 10px 20px;
-    display: flex;
-    justify-self: center;
-    overflow: hidden;
+    padding: 200px 20px 10px 20px;
 }
+.eat-what-content{
+    padding: 0;
+    font-size: 40px;
+    font-weight: 350;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.whateat{
+    font-size: 35px;
+    font-weight: 700;
+    height: 60px;
+    color: #ff9733;
+    text-align: center;
+}
+
+.eat-start-box{
+    text-align: center;
+}
+.eat-start {
+    width: 140px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(31, 41, 55);
+    padding: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: rgb(75 85 99);
+        /* hover:bg-gray-600 */
+    }
+
+}
+

@@ -9,8 +9,8 @@ const ArticleDetail = ({ article }) => {
       <h1 className='title'>{article.title}</h1>
       <a className='path' href={article.path}>[原文链接]</a>
       <p className="meta">{article.id}</p>
-      <div className="content">
-        {article.summary}
+      <div className="essay">
+        {article.essay}
       </div>
     </div>
   );

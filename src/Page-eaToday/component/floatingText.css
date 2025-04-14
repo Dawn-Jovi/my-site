@@ -1,0 +1,16 @@
+.floating-text {
+    position: fixed;
+    color: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+}
+@keyframes floatIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
