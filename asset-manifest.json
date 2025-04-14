@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-site/static/css/main.8dac8928.css",
-    "main.js": "/my-site/static/js/main.482a6077.js",
+    "main.css": "/my-site/static/css/main.39e05f4b.css",
+    "main.js": "/my-site/static/js/main.2bada793.js",
     "static/media/No.326-ShangShouChunYuanTi-2.ttf": "/my-site/static/media/No.326-ShangShouChunYuanTi-2.7207378124c318c0a951.ttf",
     "static/media/头像.png": "/my-site/static/media/头像.de68db80ffd09272a525.png",
     "static/media/寿司1.png": "/my-site/static/media/寿司1.4d81d5d4f7bc2d232e6c.png",
@@ -11,11 +11,11 @@
     "static/media/布丁.png": "/my-site/static/media/布丁.afc47b2e03c66d0c5168.png",
     "static/media/牛奶.png": "/my-site/static/media/牛奶.47d4f29f135a12c0404f.png",
     "index.html": "/my-site/index.html",
-    "main.8dac8928.css.map": "/my-site/static/css/main.8dac8928.css.map",
-    "main.482a6077.js.map": "/my-site/static/js/main.482a6077.js.map"
+    "main.39e05f4b.css.map": "/my-site/static/css/main.39e05f4b.css.map",
+    "main.2bada793.js.map": "/my-site/static/js/main.2bada793.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dac8928.css",
-    "static/js/main.482a6077.js"
+    "static/css/main.39e05f4b.css",
+    "static/js/main.2bada793.js"
   ]
 }
