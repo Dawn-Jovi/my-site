@@ -18,10 +18,10 @@ function Home() {
                 <main className='mainContent-bg'>
                     <section className="mainContent">
                         {/* 主标题 */}
-                        <h1 className="heroTitle">
+                        <div className="heroTitle">
                             从<span className="highlight">Bug</span>中诞生<br />
                             在<span className="highlight">代码</span>中进化
-                        </h1>
+                        </div>
 
                         {/* 间线条目示例 */}
                         <ul className='timeline-content'>

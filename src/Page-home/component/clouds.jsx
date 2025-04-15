@@ -18,7 +18,7 @@ const Cloud = ({ left, top, duration, scale, delay }) => (
 const Clouds = () => {
   return (
     <div className="sky">
-      {Array.from({ length: 30 }).map((_, i) => (
+      {Array.from({ length: 10 }).map((_, i) => (
         <Cloud
               key={i}
               left={Math.random() *(-100)+100}

@@ -1,104 +1,153 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Navbar from "../navbar";
 import './eaToday.css';
 import _ from 'lodash';
 import FloatingText from "./component/floatingText";
 import MyModal from "../Modal";
 
-const gourmet = " 馄饨 拉面 烩面 热干面 刀削面 油泼面 炸酱面 炒面 重庆小面 米线 酸辣粉 土豆粉 螺狮粉 凉皮儿 麻辣烫 肉夹馍 羊肉汤 炒饭 盖浇饭 卤肉饭 烤肉饭 黄焖鸡米饭 驴肉火烧 川菜 麻辣香锅 火锅 酸菜鱼 烤串 披萨 烤鸭 汉堡 炸鸡 寿司 蟹黄包 煎饼果子 生煎 炒年糕 ";
-const foods = gourmet
-    .replace(/ +/g, " ")
-    .replace(/^ | $/g, "")
-    .split(" ");
+// 定义运行状态常量以提高可读性
+const RUNNING_STATES = {
+  START: 'start',
+  STOP: 'stop',
+  AGAIN: 'again',
+  FINISHED: 'finished'
+};
 
-// 浮动文字组件
-
+// 处理美食字符串为数组格式
+const gourmet = " 馄饨 拉面 烩面 热干面 刀削面 油泼面 炸酱面 炒面 重庆小面 米线 酸辣粉 土豆粉 螺狮粉 凉皮儿 麻辣烫 肉夹馍 羊肉汤 炒饭 盖浇饭 卤肉饭 烤肉饭 黄焖鸡米饭 驴肉火烧 川菜 麻辣香锅 火锅 酸菜鱼 烤串 披萨 烤鸭 汉堡 炸鸡 寿司 蟹黄包 煎饼果子 生煎 炒年糕 "; 
+const foods = gourmet.trim().split(/\s+/);
 
 function EaToday() {
-    
+  // 状态管理
     const [headingText, setHeadingText] = useState("吃什么？");
-    const [isRunning, setIsRunning] = useState("start");
-    const [currentfood, setCurrentFood] = useState(" ");
+    const [runningState, setRunningState] = useState(RUNNING_STATES.START);
+    const [currentFood, setCurrentFood] = useState("");
     const [floatings, setFloatings] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [run, setRun] = useState(6);
+    const [remainingRuns, setRemainingRuns] = useState(5); // 剩余随机次数
+    // const [/]
+  
+    // 使用 ref 保存定时器和稳定的回调函数
     const intervalRef = useRef(null);
+    const floatingId = useRef(0); // 用于生成唯一键值
+    
 
-    const getRandomFood = useRef(
-        _.throttle(() => {
-            const newfood = _.sample(foods);
-            setCurrentFood(newfood);
-            setFloatings(prev => [...prev, 
-                <FloatingText key={Date.now()} text={newfood} />
-            ]);
-        }, 100)
+    // 随机食物获取函数
+    const getRandomFood = () => {
+        const newFood = _.sample(foods);
+        setCurrentFood(newFood);
+        setFloatings(prev => [...prev, <FloatingText key={floatingId.current++} text={newFood} />]);
+    }
+
+    const throttledGetRandomFood = useCallback(
+        _.throttle(getRandomFood, 100), [getRandomFood]
     );
+    
+    // const getRandomFood = useCallback(
+    //     _.throttle(() => {
+    //         const newFood = _.sample(foods);
+    //         setCurrentFood(newFood);
+    //         // 使用自增id保证键值唯一性
+    //         setFloatings(prev => [...prev, 
+    //         <FloatingText key={floatingId.current++} text={newFood} />
+    //         ]);
+    //     }, 100),[]
+    // );
 
-    // 清理效果
+    // 组件卸载时清理定时器
     useEffect(() => {
-        return () => {
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        };
+    return () => {
+        intervalRef.current && clearInterval(intervalRef.current);
+    };
     }, []);
 
+  
+    // 处理主按钮点击事件
     const handleClick = () => {
-        if (isRunning === "start" || isRunning === "again") {
-            intervalRef.current = setInterval(() => { getRandomFood.current(); }, 100);
-            setRun(prev => {
-                const newRun = prev - 1;
-                if (newRun <= 0) {
-                    setIsModalOpen(true);
-                    setIsRunning('NULL');
-                    clearInterval(intervalRef.current);
-                }
-                return newRun;
-            });
-            setIsRunning("stop");
-            setHeadingText("吃什么？");
-        } else if (isRunning === "stop") {
-            setIsRunning("again");
-            clearInterval(intervalRef.current);
-            setHeadingText("吃这个！");
-
+        switch (runningState) {
+        case RUNNING_STATES.START:
+        case RUNNING_STATES.AGAIN:
+            startRandomizing();
+            break;
+        case RUNNING_STATES.STOP:
+            stopRandomizing();
+            break;
+        default:
+            break;
         }
+    };
+
+  
+    // 开始随机选择食物
+    const startRandomizing = () => {
+        intervalRef.current = setInterval(throttledGetRandomFood, 100);
+        setRunningState(RUNNING_STATES.STOP);
+        setHeadingText("吃什么？");
+    };
+
+    // 停止随机选择并显示结果
+    const stopRandomizing = () => {
+        clearInterval(intervalRef.current);
+        setRunningState(RUNNING_STATES.AGAIN);
+        setHeadingText("吃这个！");
         
+        // 更新剩余次数并检查是否结束
+        setRemainingRuns(a => a - 1);
+        if (remainingRuns <= 0) {
+            setIsModalOpen(true);
+            setRunningState(RUNNING_STATES.FINISHED);
+        }
     };
 
 
+    // 根据状态获取按钮文本
+    const getButtonText = () => {
+    switch (runningState) {
+        case RUNNING_STATES.START:
+        return '开始';
+        case RUNNING_STATES.STOP:
+        return '停止';
+        case RUNNING_STATES.AGAIN:
+        return '再来一次';
+        default:
+        return null;
+    }
+    };
 
     return (
-        <section id="eaToday" className="eatoday-container" data-nav-section>
-            <Navbar />
-            <div className="eat-content">
-                <h1 className="eat-what-content">
-                    事已至此，先吃饭吧。{headingText}
-                    <br /><br />
-                </h1>
+    <section id="eatoday" className="eatoday-container" data-nav-section>
+        <Navbar />
+        
+        <div className="eat-content">
+        <h1 className="eat-what-content">
+            事已至此，先吃饭吧。{headingText}
+            <br /><br />
+        </h1>
 
-                <p className="whateat">
-                    {isRunning === "start" ? ' ' :currentfood}
-                </p>       
+        {/* 当前选中的食物显示 */}
+        <p className="whateat">
+            {runningState !== RUNNING_STATES.START && currentFood}
+        </p>       
+        {/* 操作按钮 */}
+        <div className="eat-start-box">
+            {runningState !== RUNNING_STATES.FINISHED && (
+            <button className="eat-start" onClick={handleClick}>
+                {getButtonText()}
+            </button>
+            )}
+        </div>
+        </div>
 
-                <div className="eat-start-box">
-                    {isRunning === "NULL" ? " " :
-                        <button className="eat-start"
-                            onClick={handleClick}
-                        >
-                            {isRunning === "start" ? '开始' : (
-                                isRunning === 'stop' ? '停止' :
-                                    '再来一次'
-                            )}
-                        </button>
-                    }
-                    
-                </div>
-            </div>
-            {floatings}
+        {/* 浮动文字效果 */}
+        {floatings}
+
+        {/* 结束弹窗 */}
             <MyModal
+                text={'这么作？那就别吃了！'}
                 isOpen={isModalOpen}
                 onRequestClose={() => setIsModalOpen(false)} 
             /> 
-        </section>
+    </section>
     );
 }
 

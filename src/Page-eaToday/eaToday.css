@@ -16,13 +16,15 @@
 }
 .eat-content{
     flex: 1;
-    padding: 200px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .eat-what-content{
     padding: 0;
     font-size: 40px;
     font-weight: 350;
-    margin: 0 0 20px;
     text-align: center;
 }
 
@@ -35,7 +37,8 @@
 }
 
 .eat-start-box{
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .eat-start {
     width: 140px;

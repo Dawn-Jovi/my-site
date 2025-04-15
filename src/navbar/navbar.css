@@ -73,6 +73,7 @@
     margin: 0;
     padding: 0;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav-links-id.active{
@@ -109,20 +110,7 @@
     padding: 0.5rem 0;
     transition: color 0.3s ease;
     user-select: none;
-
-    /* 链接下划线效果 */
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #6c5ce7;
-        /* 紫色下划线 */
-        transition: width 0.3s ease;
-        /* 宽度过渡 */
-    }
+    
     /* 鼠标悬停时显示完整下划线 */
     &:hover::after {
         width: 100%;
@@ -139,4 +127,35 @@
     height: 21px;
     vertical-align: middle;
     display: inline-block;
+}
+
+
+.nav-links-id.has-dropdown:hover .dropdown-menu,
+.nav-links-id.has-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.dropdown-menu{
+    position: absolute;
+    min-width: 150px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(12px) saturate(180%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 1s;
+    list-style: none;
+    padding-top: 2px;
+}
+.dropdow-item-a,
+.dropdow-item-li{
+    color: var(--dropdown-text) !important;
+    padding: 5px 5px 10px 15px;
+    display: block;
+    text-decoration: none;
+    &:hover {
+            background-color: #f9f9f9;
+        }
 }

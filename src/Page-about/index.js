@@ -17,7 +17,7 @@ function About() {
 
     return (
 
-        <section id ="about" className='aboutme-container' data-nav-section>
+        <section id ="aboutme" className='aboutme-container' data-nav-section>
             
             <Navbar/>
 
