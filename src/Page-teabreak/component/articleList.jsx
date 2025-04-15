@@ -5,6 +5,7 @@ function ArticleList({articles, activeArticle, setActiveArticle}) {
     <div className='list-container'>
         {articles.map(article => (
         <div
+            key={article.id}
             id={article.id}
             className="item"
             onClick={() => setActiveArticle(article)}

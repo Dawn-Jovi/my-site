@@ -38,7 +38,7 @@ const Navbar = () => {
     {
       id: "buildpage",
       path: "/buildpage",
-      selector: "#",
+      selector: "#buildpage",
       icon: ice,
       text: "碳水快乐屋"
     },
@@ -107,7 +107,7 @@ const Navbar = () => {
       const hash = window.location.hash.replace('#', '');
       setActiveId(hash || (location.pathname === '/' ? 'home' : ''));
     }
-  }, [location.pathname, activeId]);
+  }, [location.pathname, activeId, NavItems]);
 
 
   

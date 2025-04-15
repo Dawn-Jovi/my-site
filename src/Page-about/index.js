@@ -49,6 +49,7 @@ function About() {
                 <div className='stats-card'>
                     {timecardData.map((item, index) => (
                         <TimeCard 
+                            key={item.id}
                             title={item.title}
                             num={item.num}
                             text={item.text}
@@ -78,6 +79,7 @@ function About() {
                             .filter(({ id }) => id === type)
                             .map((item, index) => (
                                 <SkillCard
+                                    key={item.name}
                                     id={item.id}
                                     name={item.name}
                                     num={item.num}
