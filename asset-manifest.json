@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/my-site/static/css/main.f5b94caf.css",
-    "main.js": "/my-site/static/js/main.d2ee2d2e.js",
+    "main.css": "/my-site/static/css/main.6e464c2d.css",
+    "main.js": "/my-site/static/js/main.15d6b221.js",
+    "static/media/AlimamaFangYuanTiVF-Thin-2.ttf": "/my-site/static/media/AlimamaFangYuanTiVF-Thin-2.a7649d42dd6421f26664.ttf",
     "static/media/No.326-ShangShouChunYuanTi-2.ttf": "/my-site/static/media/No.326-ShangShouChunYuanTi-2.7207378124c318c0a951.ttf",
     "static/media/头像.png": "/my-site/static/media/头像.de68db80ffd09272a525.png",
     "static/media/寿司1.png": "/my-site/static/media/寿司1.4d81d5d4f7bc2d232e6c.png",
@@ -10,13 +11,14 @@
     "static/media/芝士.png": "/my-site/static/media/芝士.b371eb21902628bd586b.png",
     "static/media/布丁.png": "/my-site/static/media/布丁.afc47b2e03c66d0c5168.png",
     "static/media/牛奶.png": "/my-site/static/media/牛奶.47d4f29f135a12c0404f.png",
+    "static/media/QRnot.jpg": "/my-site/static/media/QRnot.9ca0d6a6414365f2c8df.jpg",
     "static/media/icomoon.woff": "/my-site/static/media/icomoon.b7e38463b1e9fd3eca44.woff",
     "index.html": "/my-site/index.html",
-    "main.f5b94caf.css.map": "/my-site/static/css/main.f5b94caf.css.map",
-    "main.d2ee2d2e.js.map": "/my-site/static/js/main.d2ee2d2e.js.map"
+    "main.6e464c2d.css.map": "/my-site/static/css/main.6e464c2d.css.map",
+    "main.15d6b221.js.map": "/my-site/static/js/main.15d6b221.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5b94caf.css",
-    "static/js/main.d2ee2d2e.js"
+    "static/css/main.6e464c2d.css",
+    "static/js/main.15d6b221.js"
   ]
 }
