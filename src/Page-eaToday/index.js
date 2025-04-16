@@ -30,35 +30,36 @@ function EaToday() {
     // 使用 ref 保存定时器和稳定的回调函数
     const intervalRef = useRef(null);
     const floatingId = useRef(0); // 用于生成唯一键值
-    
+    const throttledGetRandomFood = useRef();
 
     // 随机食物获取函数
-    const getRandomFood = () => {
+    const getRandomFood = useCallback(() => {
         const newFood = _.sample(foods);
         setCurrentFood(newFood);
-        setFloatings(prev => [...prev, <FloatingText key={floatingId.current++} text={newFood} />]);
-    }
+        setFloatings(prev => [
+            ...prev.slice(-5),
+            <FloatingText
+                key={ floatingId.current++}
+                text={newFood}
+            />
+        ])
+    },[])
 
-    const throttledGetRandomFood = useCallback(
-        _.throttle(getRandomFood, 100), [getRandomFood]
-    );
-    
-    // const getRandomFood = useCallback(
-    //     _.throttle(() => {
-    //         const newFood = _.sample(foods);
-    //         setCurrentFood(newFood);
-    //         // 使用自增id保证键值唯一性
-    //         setFloatings(prev => [...prev, 
-    //         <FloatingText key={floatingId.current++} text={newFood} />
-    //         ]);
-    //     }, 100),[]
-    // );
+    useEffect(() => {
+        throttledGetRandomFood.current = _.throttle(() => {
+            getRandomFood();
+        }, 100);
+        return () => {
+            throttledGetRandomFood.current?.cancel();
+        };
+    }, [getRandomFood]);
 
     // 组件卸载时清理定时器
     useEffect(() => {
-    return () => {
-        intervalRef.current && clearInterval(intervalRef.current);
-    };
+        return () => {
+            intervalRef.current && clearInterval(intervalRef.current);
+            throttledGetRandomFood.current?.cancel();
+        };
     }, []);
 
   

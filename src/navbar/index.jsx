@@ -36,20 +36,12 @@ const Navbar = () => {
       text: "茶歇时光机"
     },
     {
-      id: "buildpage",
-      path: "/buildpage",
-      selector: "#buildpage",
-      icon: ice,
-      text: "碳水快乐屋"
-    },
-    {
       id: "echoArk1",
       path:'#',
       selector: "#echoArk",
       icon: coffee,
       text: "数字方舟",
       dropdown: [
-        { id: "subItem1", path: "/echoArk", text: "子菜单项1" },
         { id: "echoArk", path: "https://github.com/Dawn-Jovi/my-site", icon: react, text: "SPA应用开发" },
         { id: "subItem3", path: "/echoArk", text: "子菜单项3" },
       ]

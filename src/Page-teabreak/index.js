@@ -26,7 +26,7 @@ function TeaBreak() {
     return _.orderBy(articles, 'id', 'desc');
   }, [articles]);
 
-  const [activeArticle, setActiveArticle] = useState(articles[0]);
+  const [activeArticle, setActiveArticle] = useState(sortList[0]);
 
   
   return (

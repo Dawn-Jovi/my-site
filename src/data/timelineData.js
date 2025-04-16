@@ -6,7 +6,7 @@ const timelineData = [
         title: '征服React',
         date: '2024.03',
         desc: '首个SPA应用开发',
-        link:'/buildPage'
+        link:'https://github.com/Dawn-Jovi/my-site'
     },
 ]
 
