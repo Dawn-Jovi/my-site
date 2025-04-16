@@ -11,7 +11,7 @@ import github from '../assets/git.png'
 import email from "../assets/email.png"
 import bilibili from "../assets/bilibili.png"
 import wechat from "../assets/微信.png"
-import xin from '../assets/爱心.png'
+import Qr from '../assets/QR.png'
 
 import { useRef, useState } from 'react';
 
@@ -90,7 +90,7 @@ function About() {
                                         transition: 'opacity 0.3s',
                                     }}
                                 >
-                                    <img className="tag-icon-qr" src={xin} alt="二维码" />
+                                    <img className="tag-icon-qr" src={Qr} alt="二维码" />
                                 </div>
                             </div>
                             
