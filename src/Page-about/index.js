@@ -31,8 +31,8 @@ function About() {
             const scrollY = window.scrollY; 
             setQrcodeStyle({
                 opacity: 1,
-                top: iconRect.top + scrollY - 110, // 上方160px（二维码高度 + 间距）
-                left:  75,
+                top: iconRect.top + scrollY - 80, // 上方160px（二维码高度 + 间距）
+                left:  275,
             });
         }
     };
