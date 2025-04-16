@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-site/static/css/main.6e464c2d.css",
-    "main.js": "/my-site/static/js/main.82c9c832.js",
+    "main.css": "/my-site/static/css/main.b410b2f2.css",
+    "main.js": "/my-site/static/js/main.c0214793.js",
     "static/media/AlimamaFangYuanTiVF-Thin-2.ttf": "/my-site/static/media/AlimamaFangYuanTiVF-Thin-2.a7649d42dd6421f26664.ttf",
     "static/media/No.326-ShangShouChunYuanTi-2.ttf": "/my-site/static/media/No.326-ShangShouChunYuanTi-2.7207378124c318c0a951.ttf",
     "static/media/QR.png": "/my-site/static/media/QR.acb3c0e6a750876980a3.png",
@@ -15,11 +15,11 @@
     "static/media/QRnot.jpg": "/my-site/static/media/QRnot.9ca0d6a6414365f2c8df.jpg",
     "static/media/icomoon.woff": "/my-site/static/media/icomoon.b7e38463b1e9fd3eca44.woff",
     "index.html": "/my-site/index.html",
-    "main.6e464c2d.css.map": "/my-site/static/css/main.6e464c2d.css.map",
-    "main.82c9c832.js.map": "/my-site/static/js/main.82c9c832.js.map"
+    "main.b410b2f2.css.map": "/my-site/static/css/main.b410b2f2.css.map",
+    "main.c0214793.js.map": "/my-site/static/js/main.c0214793.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e464c2d.css",
-    "static/js/main.82c9c832.js"
+    "static/css/main.b410b2f2.css",
+    "static/js/main.c0214793.js"
   ]
 }
