@@ -6,6 +6,7 @@ import BuildPage from './Page-build';
 import TeaBreak from './Page-teabreak';
 import EAToday from "./Page-eaToday"
 import EchoArk from './Page-echoArk';
+import QRnot from './trashCan/QRnot';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/teabreak" element={<PageWrapper title="茶歇时光机" children={<TeaBreak />} />} />
         <Route path="/eaToday" element={<PageWrapper title="碳水快乐屋" children={<EAToday />} />} />
         <Route path="/echoArk" element={<PageWrapper title="数字方舟" children={<EchoArk />} />} />
+        <Route path="/QRnot" element={<PageWrapper title="不要乱扫二维码啊！！！！！！！！" children={<QRnot />} />} />
         
       </Routes>
       

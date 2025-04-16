@@ -10,14 +10,40 @@ import SkillCard from './component/skillcard';
 import github from '../assets/git.png'
 import email from "../assets/email.png"
 import bilibili from "../assets/bilibili.png"
+import wechat from "../assets/微信.png"
+import xin from '../assets/爱心.png'
+
+import { useRef, useState } from 'react';
 
 function About() {
 
+    const QRcode = useRef(null);
+    const [qrcodeStyle, setQrcodeStyle] = useState({
+        opacity: 0,
+        top: 0,
+        left:0
+    });
 
-    // const HTMLCSS_ = 90;
-    // const JavaScript_ = 80;
-    // const NodeJs_ = 0;
-    // const Python_ = 50;
+    // 计算二维码位置
+    const updateQrcodePosition = () => {
+        if (QRcode.current) {
+            const iconRect = QRcode.current.getBoundingClientRect();
+            const scrollY = window.scrollY; 
+            setQrcodeStyle({
+                opacity: 1,
+                top: iconRect.top + scrollY - 110, // 上方160px（二维码高度 + 间距）
+                left:  75,
+            });
+        }
+    };
+
+    // 隐藏二维码
+    const hideQrcode = () => {
+        setQrcodeStyle(prev => ({ ...prev, opacity: 0 }));
+    };
+
+
+
 
     return (
 
@@ -46,7 +72,28 @@ function About() {
 
                             <a href= "/#/about"><img className='tag-icon' src={email} alt=''/></a>
 
-                            <a href='https://space.bilibili.com/100856837?spm_id_from=333.1007.0.0'><img className='tag-icon' src={bilibili} alt=''/></a>
+                            <a href='https://space.bilibili.com/100856837?spm_id_from=333.1007.0.0'><img className='tag-icon' src={bilibili} alt='' /></a>
+                            
+                            <div
+                                className="tag-icon-content"
+                                ref={QRcode}
+                                onMouseEnter={updateQrcodePosition}
+                                onMouseLeave={hideQrcode}>
+                                <img className="tag-icon" src={wechat} alt="微信" />
+                                <div 
+                                    className="qrcode" 
+                                    style={{
+                                        position: 'absolute',
+                                        top: `${qrcodeStyle.top}px`,
+                                        left: `${qrcodeStyle.left}px`,
+                                        opacity: qrcodeStyle.opacity,
+                                        transition: 'opacity 0.3s',
+                                    }}
+                                >
+                                    <img className="tag-icon-qr" src={xin} alt="二维码" />
+                                </div>
+                            </div>
+                            
                         </div>
                     </section>
                 </div>
