@@ -7,6 +7,10 @@ import timecardData from "../data/timecardData"
 import skillcardData from '../data/skillcardData';
 import SkillCard from './component/skillcard';
 
+import github from '../assets/git.png'
+import email from "../assets/email.png"
+import bilibili from "../assets/bilibili.png"
+
 function About() {
 
 
@@ -35,12 +39,14 @@ function About() {
                     />
                     <section className='profile-content'>
                         <h1 className='profile-title'>码力全开の萌新工程师</h1>
-                        <p className='profile-subtitle'>❤️ 前端魔法师 | 🚀 后端探索者 | 🎮 游戏爱好者</p>
+                        <p className='profile-subtitle'>❤️ 前端魔法师 | 🚀 后端探索者 | 🎮 游戏爱好者 | ☕咖啡因依赖者 </p>
                         {/* tag区域 */}
                         <div className='tags-container'>
-                            <span className="anime-tag">全栈开发萌新</span>
-                            <span className="anime-tag">Python修行中</span>
-                            <span className="anime-tag">咖啡因依赖者</span>
+                            <a href='https://github.com/Dawn-Jovi'><img className='tag-icon' src={github}alt='' /></a>
+
+                            <a href= "/#/about"><img className='tag-icon' src={email} alt=''/></a>
+
+                            <a href='https://space.bilibili.com/100856837?spm_id_from=333.1007.0.0'><img className='tag-icon' src={bilibili} alt=''/></a>
                         </div>
                     </section>
                 </div>

@@ -9,6 +9,7 @@ import ice from "./assets/冰淇淋.png";
 import code from "./assets/代码.png";
 import aboutme from './assets/账户A.png';
 import react from './assets/React.png'
+import milk from './assets/milk.png'
 
 const Navbar = () => {
   const [hoverTimeout, setHoverTimeout] = useState(null);
@@ -42,8 +43,8 @@ const Navbar = () => {
       icon: coffee,
       text: "数字方舟",
       dropdown: [
-        { id: "echoArk", path: "https://github.com/Dawn-Jovi/my-site", icon: react, text: "SPA应用开发" },
-        { id: "subItem3", path: "/echoArk", text: "子菜单项3" },
+        { id: "echoArk", path: "https://github.com/Dawn-Jovi/my-site", icon: react, text: " SPA应用开发" },
+        { id: "subItem3", path: "/echoArk", text: " 子菜单项3" },
       ]
     },
     {
@@ -53,8 +54,9 @@ const Navbar = () => {
       icon: code,
       text: "代码之外",
       dropdown: [
-        { id: "aboutme", path: '/about', icon: aboutme, text: '关于我' },
-        { id: "eatoday",path: "/eaToday",icon: ice,text: "碳水快乐屋"}
+        { id: "aboutme", path: '/about', icon: aboutme, text: ' 关于我' },
+        { id: "eatoday",path: "/eaToday",icon: ice,text: " 碳水快乐屋"},
+        { id: "milk",path: "https://www.milkywayidle.com/?ref=186570",icon: milk,text: " 银河奶牛"},
       ]
     },
   ]),[]);
