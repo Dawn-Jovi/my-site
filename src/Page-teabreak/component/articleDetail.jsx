@@ -7,7 +7,7 @@ const ArticleDetail = ({ article }) => {
   return (
     <div className="article-detail">
       <h1 className='title'>{article.title}</h1>
-      <a className='path' href={article.path}>[原文链接]</a>
+      <a className='path' href={article.path}>{article.plate}</a>
       <p className="meta">{article.id}</p>
       <div className="essay">
         {article.essay}

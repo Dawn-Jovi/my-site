@@ -2,14 +2,15 @@ import CodeBlock from '../CodeBlock';
 import './1.css'
 
 const ThePrimalOrigin = {
-  id: '0000-00-00 00:00',
+  id: '0000-00-00',
   title: '从零到一：我用React+Node.js搭建个人技术博客的全过程',
-  path:'https://github.com/Dawn-Jovi/my-site',
+  path: 'https://github.com/Dawn-Jovi/my-site',
+  plate:'[所有黎明的开端]',
   essay: (
     <>
       <h1>📌 写在前面</h1>
       <p className="TPO-p">
-        &nbsp;&nbsp;&nbsp;作为开发者，搭建个人网站是展示技术能力和沉淀知识的最佳方式。经过2周的开发迭代，我的全栈个人网站v1.0终于上线！本文将完整复盘技术选型、开发过程和踩坑经验。
+        &emsp;&emsp;作为开发者，搭建个人网站是展示技术能力和沉淀知识的最佳方式。经过2周的开发迭代，我的全栈个人网站v1.0终于上线！本文将完整复盘技术选型、开发过程和踩坑经验。
       </p>
       <h2>🛠 技术栈全景</h2>
       <p>前端架构：</p>

@@ -5,20 +5,14 @@ import ArticleList from './component/articleList';
 import ArticleDetail from './component/articleDetail';
 import _ from 'lodash'
 import ThePrimalOrigin from '../blog/ThePrimalOrigin'
+import Fragments from '../blog/FragmentsOfUnfinishedMetamorphosis'
+import JavaInterPoly from '../blog/JavaInterPoly';
 
 function TeaBreak() {
   const articles = useMemo(() => [
     ThePrimalOrigin,
-    {
-      id: "2023-11-02 13:00",
-      path: "https://dawn-jovi.github.io/my-site/",
-      title: "千里关山边草暮，一星烽火朔云秋",
-      essay:''
-    },
-    { id: "0000-00-00 00:11", title: "行人无限秋风思，隔水青山似故乡。" },
-    { id: "9999-99-99 99:99", title: "只恐长江水，尽是儿女泪。" },
-    { id: "1111-11-11 11:11", title: "卧看花梢摇动、一枝枝。娉娉袅袅教谁惜。" },
-    { id: "2023-01-01 12:00", title: "问蓬莱何处，风月依然，万里江清。休说神仙事，便神仙纵有，即是闲人。" },
+    Fragments,
+    JavaInterPoly
   ],[]);
 
 
